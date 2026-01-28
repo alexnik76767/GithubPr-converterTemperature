@@ -12,13 +12,20 @@ public class Main {
                 " Celsius to Fahrenheit");
 
         double fahrenheit = 50;
+        double cls = 30;
         double celsius = convFahrToCels(fahrenheit);
+        double frt = convCelsToFahr(cls);
         System.out.println("Result is " + fahrenheit + " fahrenheit degree equals " + celsius +
                 " celsius degree. ");
+        System.out.println("Result is " + cls + " celsius degree equals " + frt +
+                " fahrenheit degree. ");
 
     }
 
     public static double convFahrToCels(double fahr) {
         return (fahr - 32) / CONV_TEMPER;
+    }
+    public static double convCelsToFahr(double cels) {
+        return cels* CONV_TEMPER + 32;
     }
 }
